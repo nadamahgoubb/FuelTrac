@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="filterresult"
+            type="com.fueltrac.model.entities.Value" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/transaction_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp">
+            <TextView
+                android:id="@+id/date"
+                android:textColor="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="@{String.valueOf(filterresult.dateTime)}"
+                android:padding="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="18sp"
+                tools:ignore="NestedWeights,RtlCompat" />
+            <View
+                android:layout_width="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/blue" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp">
+            <TextView
+                android:id="@+id/Volume"
+                android:layout_width="match_parent"
+                android:textColor="@color/blue"
+                android:layout_weight="1"
+                android:padding="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@{String.valueOf(filterresult.fuelVolume)}"
+                android:textSize="18sp"
+                tools:ignore="NestedWeights,RtlCompat" />
+            <View
+                android:layout_width="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/blue" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp">
+            <TextView
+                android:id="@+id/WaterVolume"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/blue"
+                android:padding="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@{String.valueOf(filterresult.waterLevel)}"
+                android:textSize="18sp"
+                tools:ignore="NestedWeights,RtlCompat" />
+            <View
+                android:layout_width="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/blue" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp">
+            <TextView
+                android:id="@+id/Level"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/blue"
+                android:padding="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@{String.valueOf(filterresult.fuelLevel)}"
+                android:textSize="18sp"
+                tools:ignore="NestedWeights,RtlCompat" />
+            <View
+                android:layout_width="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/blue" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp">
+            <TextView
+                android:id="@+id/Ullage"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/blue"
+                android:padding="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@{String.valueOf(filterresult.ullage)}"
+                android:textSize="18sp"
+                tools:ignore="NestedWeights,RtlCompat" />
+            <View
+                android:layout_width="1dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/blue" />
+
+        </LinearLayout>
+            <TextView
+                android:id="@+id/Temperature"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:padding="@dimen/_1sdp"
+                android:gravity="center"
+                android:textColor="@color/blue"
+                android:text="@{String.valueOf(filterresult.temperature)}"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+</layout>

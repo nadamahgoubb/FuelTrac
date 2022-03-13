@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="filterresult"
+            type="com.fueltrac.model.entities.Value" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/gray1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/white"
+                android:text="@{String.valueOf(filterresult.dateTime)}"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp" />
+
+            <TextView
+                android:id="@+id/Volume"
+                android:layout_width="wrap_content"
+                android:textColor="@color/blue"
+                android:layout_weight="1"
+                android:background="@color/white"
+
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:text="@{String.valueOf(filterresult.fuelVolume)}"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/WaterVolume"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/blue"
+
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:text="@{String.valueOf(filterresult.waterLevel)}"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/Level"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/blue"
+                android:background="@color/white"
+
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:text="@{String.valueOf(filterresult.fuelLevel)}"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/Ullage"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/blue"
+                android:background="@color/white"
+
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:text="@{String.valueOf(filterresult.ullage)}"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/Temperature"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+
+                android:textColor="@color/blue"
+                android:text="@{String.valueOf(filterresult.temperature)}"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

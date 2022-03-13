@@ -1,0 +1,117 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">FuelTrac</string>
+    <string name="title_activity_splash">Fuel Trac</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="log_in">LOG IN</string>
+    <string name="username">User Name</string>
+    <string name="content_description_icon">icon</string>
+    <string name="password">Password</string>
+    <string name="switch_to_arabic">Switch To Arabic</string>
+    <string name="manual_search">Manual Search</string>
+    <string name="for_a_manual_search_select_bump_number_and_write_the_vehicle_plate_number">For A Manual Search, Select Bump Number And Write The Vehicle Plate Number</string>
+    <string name="bump_number">Bump Number</string>
+    <string name="search">Search</string>
+    <string name="in_order_to_search_by_rfid_sensor_move_your_device_near_the_vehicle_to_read_the_data_or_press_on_button">In Order To Search By Rfid Sensor , Move Your Device \n Near The Vehicle To Read The Data , Or Press On Button.</string>
+    <string name="select_the_type_at_the_beginning_before_transaction">Select The Type At The Beginning Before Transaction</string>
+    <string name="customer">Customer</string>
+    <string name="service">Service</string>
+    <string name="guest">Guest</string>
+    <string name="Continue">Continue</string>
+    <string name="vehicle_data">Vehicle Data</string>
+    <string name="color">Color</string>
+    <string name="model">Model</string>
+    <string name="type">Type</string>
+    <string name="volume">Volume</string>
+    <string name="level">Level</string>
+    <string name="water_level">Water Level</string>
+    <string name="ullage">Ullage</string>
+    <string name="temperature">Temperature</string>
+    <string name="fuel_type">Fuel Type</string>
+    <string name="driver">Driver</string>
+    <string name="notes">Notes</string>
+    <string name="department">Department</string>
+    <string name="maximum_allowed">Maximum Allowed</string>
+    <string name="last_fuel_date">Last Fuel Date</string>
+    <string name="allowed">Allowed</string>
+    <string name="sorry_this_vehicle_restricted_so_you_can_t_make_any_transactions">Sorry , This Vehicle Restricted So You Can\'t Make Any Transactions</string>
+    <string name="start_fueling">Start fueling</string>
+    <string name="restricted">Restricted</string>
+    <string name="transactions">Transactions</string>
+
+    <string name="finish_fueling">Finish Fueling</string>
+    <string name="current_running_transactions">Current Running Transactions</string>
+    <string name="there_are_no_current_transfers">There Are No Current Transfers</string>
+    <string name="station">Station</string>
+    <string name="tank">Tank</string>
+    <string name="select_station_and_tank_to_preview_tank_information">Select Station And Tank To Preview Tank Information</string>
+    <string name="dialog_title">Rfid Sensor</string>
+    <string name="Fueling_Finished">Fueling Finished</string>
+    <string name="Fueling_Started">Fueling Started</string>
+    <string name="dialog_search_title">No Result</string>
+    <string name="body_rfid_dialog">To Use The Sensor Correctly, Press The Button
+And Bring It Closer To The Crown, Then Move
+Your Finger Away From The Button</string>
+    <string name="body_search_dialog">The Number You Entered Did Not Match
+Any Existing Data</string>
+    <string name="body_fueling_finished_dialog">The Fueling Process Finished , Write The
+ Number Of Liters That Were Transported To
+ The Vehicle</string>
+    <string name="body_fueling_finished_desc_dialog">The Fueling Process Finished , Write The
+Number Of Liters That Were Transported To
+The Vehicle</string>
+    <string name="body_fueling_started_dialog">The Feuling Process Has Already Begun</string>
+
+    <string name="image_description">Image Description</string>
+    <string name="Dialog_Button">OK, THANKS</string>
+    <string name="Done">DONE</string>
+    <string name="Back_Search">BACK TO SEARCH</string>
+    <string name="View_Transaction">VIEW TRANSACTIONS</string>
+    <string name="Finish_Fueling">FINISH FUELING</string>
+    <string name="number_of_liters">Number Of Liters</string>
+    <string name="liters">Liters</string>
+    <string name="Text_Test">Test</string>
+    <string name="driverNumber">Driver Number</string>
+    <string name="EnterDriverNum">Enter the driver number</string>
+    <string name="the_reader_is_running_now">the reader is running now</string>
+    <string name="company_number">Company Number</string>
+    <string name="filter">Filter</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="Select_Time">Select Time</string>
+    <string name="show_result">SHOW RESULTS</string>
+    <string name="Select_Time_message">Select A Specific Date Or Period To View Detailed Tank Results</string>
+    <string name="cancel" tools:ignore="ButtonCase">CANCEL</string>
+    <string name="last_reading_description">Last Reading %1$2s Days Ago</string>
+    <string name="tank_Example">Tank 5</string>
+    <string name="station_example">Hwally Station</string>
+    <string name="plate_number">Plate Number</string>
+    <string name="error">Error</string>
+    <string name="subscribers">Subscribers</string>
+    <string name="fleet">Fleet</string>
+    <string name="emergencies">Emergencies</string>
+    <string name="Oil">Oil</string>
+    <string name="OilDescription">Specify The Type And Quantity If The Customer
+Requests</string>
+    <string name="price">Price</string>
+    <string name="skip_and_start_fueling">SKIP AND START FUELING</string>
+    <string name="next_fueling">NEXT (FUELING)</string>
+    <string name="number_5">5.00</string>
+    <string name="Fueling">Fueling</string>
+    <string name="select_pump">Select Pump</string>
+    <string name="benzene">Benzene</string>
+    <string name="diesel">Diesel</string>
+    <string name="transaction_finished_successfuly">Transaction finished successfully</string>
+    <string name="requredfelid">Required field</string>
+    <string name="k_d">K.D</string>
+    <string name="specific_liters">Specific Liters</string>
+    <string name="full_tank">Full Tank</string>
+    <string name="Payment_methods">Choose From Two Payment Methods To Complete The Payment For The Guest</string>
+    <string name="total_cost">Total Cost</string>
+    <string name="num">%1$2s K.D</string>
+    <string name="Cash">Cash</string>
+    <string name="Knet">Knet</string>
+    <string name="transaction_reference_number">Enter Transaction Reference Number</string>
+
+
+</resources>

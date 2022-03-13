@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="isfinish"
+            type="Boolean" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_white"
+            android:orientation="vertical"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp"
+            tools:ignore="MissingConstraints">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minWidth="@dimen/_500sdp"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_20sdp"
+                        android:text="@string/Fueling"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/Image"
+                            android:layout_width="0dp"
+                            android:layout_height="130sp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/image_description"
+                            android:src="@drawable/fulingstarted"
+                            app:layout_constraintWidth_percent=".5"
+                            tools:layout_editor_absoluteX="12dp" />
+
+                        <com.skydoves.progressview.ProgressView
+                            android:id="@+id/progressView1"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+                            app:layout_constraintStart_toEndOf="@+id/Image"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent=".05"
+                            app:progressView_autoAnimate="true"
+                            app:progressView_colorBackground="@color/light_gray1"
+                            app:progressView_colorProgress="@color/blue"
+                            app:progressView_labelColorInner="@color/white"
+                            app:progressView_labelColorOuter="@color/black"
+                            app:progressView_labelSize="13sp"
+                            app:progressView_labelSpace="10dp"
+                            app:progressView_labelText="achieve 65%"
+                            app:progressView_labelTypeface="bold"
+                            app:progressView_max="100"
+                            app:progressView_min="15"
+                            app:progressView_orientation="vertical"
+                            app:progressView_padding="1dp"
+                            app:progressView_progress="40"
+                            app:progressView_progressFromPrevious="true"
+                            app:progressView_radius="12dp" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout2"
+                            android:layout_width="0dp"
+                            android:paddingTop="10sp"
+                            app:layout_constraintWidth_percent=".3"
+                            android:layout_height="match_parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Waiting To \nFueling "
+                                android:visibility="@{isfinish?View.GONE:View.VISIBLE , default = gone }"
+                                app:layout_constraintHeight_percent=".5" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/constraintLayout3"
+                                android:layout_width="match_parent"
+                                android:visibility="@{isfinish?View.VISIBLE:View.GONE}"
+                                android:layout_height="0dp"
+                                app:layout_constraintHeight_percent=".5">
+
+                                <TextView
+                                    android:id="@+id/textView5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:gravity="center"
+                                    android:text="4.33"
+                                    android:textColor="@color/blue"
+                                    android:textSize="20sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent=".5"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:gravity="top|center"
+                                    android:textColor="@color/black"
+                                    android:text="@string/liters"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent=".5" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:visibility="@{isfinish?View.VISIBLE:View.GONE}"
+                                app:layout_constraintHeight_percent=".5"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:gravity="center"
+                                    android:text="10.502"
+                                    android:textColor="@color/blue"
+                                    android:textSize="20sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent=".5"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:gravity="top|center"
+                                    android:textColor="@color/black"
+                                    android:text="@string/k_d"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent=".5" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:visibility="@{isfinish? View.GONE :View.VISIBLE}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <CheckBox
+                            android:id="@+id/specific_liters"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:background="@drawable/selector"
+                            android:button="@android:color/transparent"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/_8sdp"
+                            android:paddingBottom="@dimen/_8sdp"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/specific_liters"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/specific_liters" />
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/full_tank"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginRight="@dimen/_20sdp" />
+
+                        <CheckBox
+                            android:id="@+id/full_tank"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:background="@drawable/selector"
+                            android:button="@android:color/transparent"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/_8sdp"
+                            android:paddingBottom="@dimen/_8sdp"
+                            app:layout_constraintEnd_toStartOf="@+id/textView7"/>
+
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:visibility="@{isfinish?View.GONE:View.VISIBLE }"
+
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/rounded_gray"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/fuel_ed"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:autofillHints=""
+                            android:background="@null"
+                            android:hint="@string/number_of_liters"
+                            android:inputType="number"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:textColor="@color/black"
+                            android:textColorHint="#6B6B6B"
+                            tools:ignore="RtlSymmetry" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:text="@string/liters"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/btn_finish_fuueling"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@{isfinish?@drawable/rounded_red:@drawable/rounded_blue,default = @drawable/rounded_blue  }"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:text="@{isfinish ? @string/Finish_Fueling:@string/start_fueling,default = @string/start_fueling}"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

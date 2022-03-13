@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bump_numbers" >
+        <item>bump number One</item>
+        <item>bump number Two</item>
+        <item>bump number Three</item>
+    </string-array>
+</resources>

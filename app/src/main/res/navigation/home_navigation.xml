@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/navigation_search">
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.fueltrac.view.fragments.search.SearchFragment"
+        tools:layout="@layout/search_fragment" />
+    <fragment
+        android:id="@+id/navigation_transaction"
+        android:name="com.fueltrac.view.fragments.transactions.TransactionFragment"
+        tools:layout="@layout/transaction_fragment" />
+</navigation>
